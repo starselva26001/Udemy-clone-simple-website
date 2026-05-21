@@ -74,6 +74,10 @@ body{
 .mylearning:hover .mylearning__popup{
     display: block;
 }
+
+.navbar__s4{
+    display: none;
+}
 .Catogories{
     display: flex;
     justify-content: space-around;
@@ -113,7 +117,7 @@ body{
     padding: 10px;
     width: fit-content;
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 15%;
     border-radius: 10px;
     animation-name: zoom;
@@ -161,7 +165,10 @@ flex-wrap: wrap;
 }
 
 .course-card{
-    width: 300px;
+    flex-basis: 20%;
+    flex-grow: 1;
+    margin: 5px;
+
 
 }
 .course-card img{
@@ -186,7 +193,7 @@ height: 50%;
     border: solid grey 1px;
     border-radius: 30px;
     flex-grow: 1;
-    flex-basis: 25%;
+    flex-basis: 22%;
 }
 .poplar{
     padding: 10px;
@@ -197,7 +204,7 @@ height: 50%;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 10px;
-    gap: 10px;
+    /* gap: 10px; */
 }
 
 .footer{
@@ -220,4 +227,35 @@ height: 50%;
     justify-content: space-between;
     align-items: center;
     margin: 20px;
+}
+
+/* Media Quaries */
+
+@media screen and (max-width:800px) {
+    body{
+        font-size: 10px;
+
+    }
+}
+
+/* course-card for mobile view */
+
+@media screen and (max-width:600px){
+    .course-card{
+        flex-basis: 40%;
+    }
+    .Catogories{
+        display: none;
+    }
+    .navbar__s3{
+        display: none;
+    }
+    .navbar__s4{
+        display: block;
+    }
+
+    .udemy-banner__offer{
+        font-size: 10px;
+        top: 5%
+    }
 }
